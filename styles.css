@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  /* COLORS */
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+
+  /* FONTS */
+  --ff-main: 'Red Hat Display', sans-serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%; /* 1rem = 10px */
+  font-family: var(--ff-main);
+  height: 100%;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/*************************/
+/* General Styling */
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-pale-blue);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  margin: 0 2rem;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 50em;
+}
+
+.card__title {
+  margin-top: 1rem;
+  font-size: 2.8rem;
+}
+
+.card__description {
+  font-size: 1.1rem;
+  color: var(--clr-desaturated-blue)
+}
+
+.card__plan-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 85%;
+
+  background-color: var(--clr-very-pale-blue);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.plan-section__icon {
+  height: 4rem;
+  width: 4rem;
+}
+
+.plan-section__title {
+  font-size: 1.1rem;
+}
+
+.plan-section__price {
+  font-size: 1rem;
+  color: var(--clr-desaturated-blue)
+}
+
+.plan-section__price > span {
+  font-size: .9rem;
+
+}
+
+.plan-section__btn {
+  font-size: .9rem;
+  margin-left: auto;
+  margin-right: .5rem;
+}
+
+.card__checkout {
+  background-color: var(--clr-bright-blue);
+  font-size: 1rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+.card__cancel {
+  background-color: #fff;
+  color: var(--clr-desaturated-blue);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/*************************/
+/* Helper Classes */
+
+button {
+  display: block;
+}
+
+.btn {
+  border: none;
+  width: 85%;
+  border-radius: 1rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
